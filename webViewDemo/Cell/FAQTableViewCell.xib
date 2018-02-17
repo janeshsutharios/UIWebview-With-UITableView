@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="185" id="KGk-i7-Jjw" customClass="FAQTableViewCell" customModule="webViewDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="185"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="184.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pxF-eJ-ufj">
+                        <rect key="frame" x="5" y="5" width="310" height="174.5"/>
+                        <color key="backgroundColor" red="0.78039215689999997" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="yvq-eE-WRQ"/>
+                        </connections>
+                    </webView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="pxF-eJ-ufj" secondAttribute="bottom" constant="5" id="DcC-Du-vAH"/>
+                    <constraint firstItem="pxF-eJ-ufj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="DtP-cy-3fL"/>
+                    <constraint firstAttribute="trailing" secondItem="pxF-eJ-ufj" secondAttribute="trailing" constant="5" id="Oqo-Fb-UGq"/>
+                    <constraint firstItem="pxF-eJ-ufj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="qiE-SX-RIX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="FAQWebView" destination="pxF-eJ-ufj" id="cd2-cY-rEo"/>
+            </connections>
+            <point key="canvasLocation" x="-244" y="-70"/>
+        </tableViewCell>
+    </objects>
+</document>
